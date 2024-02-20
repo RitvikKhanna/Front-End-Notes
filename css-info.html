@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>CSS</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Basics Summary</div>
+    <nav>
+      <a href="./index.html">HTML</a>
+      <a href="./css-info.html">CSS</a>
+      <a href="">JS</a>
+    </nav>
+  </header>
+  <div class="content content-css">
+    <div class="content-header">
+      <h1 class="content-heading">CSS - Cascading Style Sheets</h1>
+      <p class="content-subheading">CSS - Used to style html and how they should be displayed.</p>
+    </div>
+    <div class="container">
+      <h1>Selectors</h1>
+      <ol>
+        <li><span class="bold">Simple Selectors: </span>Select el based on id, name, class</li>
+        <li><span class="bold">Combinator Selectors: </span>Select el based on a relationship
+          <ul>
+            <li>Space - Descendant</li>
+            <li>Child Selector - ">"</li>
+            <li>Adjacent Sibling - "+"</li>
+            <li>General Sibling - "~"</li>
+          </ul>
+        </li>
+        <li><span class="bold">Pseudo-Class: </span>Special state - hover, unvisited, focus etc.</li>
+        <li><span class="bold">Pseudo-Elements: </span>Specified parts of an element - first letter, line or insert content before or after</li>
+        <li><span class="bold">Attribute Selectors: </span>Select el based on attribute or value - [attribute~="value"]</li>
+      </ol>
+    </div>
+    <div class="container">
+      <h1>Units</h1>
+      <div id="units-container">
+        <table>
+          <caption class="table-heading">Absolute Lengths</caption>
+          <thead>
+            <tr class="table-header-row">
+              <th>Unit</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cm</td>
+              <td>centimeters</td>
+            </tr>
+            <tr>
+              <td>mm</td>
+              <td>millimeters</td>
+            </tr>
+            <tr>
+              <td>in</td>
+              <td>inches (1 in = 96px)</td>
+            </tr>
+            <tr>
+              <td>px</td>
+              <td>pixel (1/96 in)</td>
+            </tr>
+            <tr>
+              <td>pt</td>
+              <td>point (1/72 in)</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <caption class="table-heading">Relative Lengths</caption>
+          <thead>
+            <tr class="table-header-row">
+              <th>Unit</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>em</td>
+              <td>Relative to font-size of el</td>
+            </tr>
+            <tr>
+              <td>ex</td>
+              <td>Relative to x-height of current el</td>
+            </tr>
+            <tr>
+              <td>ch</td>
+              <td>Relative to width of the "0"</td>
+            </tr>
+            <tr>
+              <td>rem</td>
+              <td>Relative to font size of the root el</td>
+            </tr>
+            <tr>
+              <td>vw</td>
+              <td>Relative to 1% of the viewport width</td>
+            </tr>
+            <tr>
+              <td>vh</td>
+              <td>Relative to 1% of the viewport height</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   </div>
+</body>
+</html>
