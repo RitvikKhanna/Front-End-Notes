@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>JS Info</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Basics Summary</div>
+    <nav>
+      <a href="./index.html">HTML</a>
+      <a href="./css-info.html">CSS</a>
+      <a href="./js-info.html">JS</a>
+    </nav>
+  </header>
+  <div class="content content-js">
+    <div class="content-header">
+      <h1 class="content-heading">Javascript</h1>
+      <p class="content-subheading">JS - Used to interact with the web page, fetch and modify and how they should be displayed.</p>
+    </div>
+    <div class="container">
+      <h1>Declarations</h1>
+      <ul>
+        <li><span class="bold">var: </span>Used in older scripts - no longer used. <span class="bold">Doesn't </span> allow block scope</li>
+        <li><span class="bold">let: </span>Used now to declare variables. Can contain letters, numbers, $ & _</li>
+        <li><span class="bold">const: </span>Used for things that don't need to change or update. Conventionally declared full uppercase</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Data Types</h1>
+      <ol>
+        <li><span class="bold">String: </span>Surround by quotes - ", ', `</li>
+        <li><span class="bold">Number: </span>Both int and floating points</li>
+        <li><span class="bold">Bigint: </span>When number is out of the usual "number" range</li>
+        <li><span class="bold">Boolean: </span>True/False</li>
+        <li><span class="bold">Undefined: </span>value not defined</li>
+        <li><span class="bold">Null: </span>No value i.e. null</li>
+        <li><span class="bold">Symbol</span></li>
+        <li><span class="bold">Object</span>
+          <ul>
+            <li><span class="bold">Object: </span>They are variables too, but instead of one value they can contain multiple values.
+              <ul>
+                <li>const person = {
+                    name = "John",
+                    age = 35,
+                    isMarried = false
+                  }
+                </li>
+                <li>You can access value of a property by doing - person.name or person["name"]</li>
+                <li>Objects can have functions as properties called <span class="bold">methods. </span>You can use <span class="bold">this</span> keyword to access internal properties of the object</li>
+              </ul>
+            </li>
+            <li><span class="bold">Array</span></li>
+            <li><span class="bold">Date</span></li>
+          </ul>
+        </li>
+      </ol>
+      <br>
+      <p><span class="error">Note: When adding number & string - JS treats number as a string. </span></p>
+      <br>
+      <p><span class="error">Note: We can use typeof to get the data type of something.</span></p>
+      <br>
+      <p><span class="error">Note: Typeof NaN is a number.</span></p>
+    </div>
+    <div class="container">
+      <h1>"This" Keyword</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>Type</td>
+            <td>Meaning</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="bold">Object Method</span></td>
+            <td><span class="bold">this refers to the object</span></td>
+          </tr>
+          <tr>
+            <td><span class="bold">Alone</span></td>
+            <td>this referes to global object</td>
+          </tr>
+          <tr>
+            <td><span class="bold">Function</span></td>
+            <td>this refers to global object></td>
+          </tr>
+          <tr>
+            <td><span class="bold">Function (strict mode)</span></td>
+            <td>this refers to undefined</td>
+          </tr>
+          <tr>
+            <td><span class="bold">Event</span></td>
+            <td>this refers to the element that received</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><span class="error">Methods like call(), apply(), and bind() can refer this to any object.</span></p>
+    </div>
+    <div class="container">
+      <h1>Type Casting</h1>
+      <p><span class="bold">Change datatype of a value to another</span></p><br>
+      <p><span class="error">Coercion: </span>Implicit (automatic)</p><br>
+      <p><span class="error">Conversion: </span>Can be implicit (automatic) or explicit (manual)</p><br>
+      <img src="./Type conversion chart.png" alt="Type conversion image">
+    </div>
+    <div class="container">
+      <h1>Data Structures</h1>
+      <p><span class="bold">Structured Data: </span>JSON</p><br>
+      <p><span class="bold">Indexed Collections: </span>Arrays, Typed Arrays</p><br>
+      <p><span class="bold"></span></p>
+    </div>
+    <div class="container">
+      <h1>Equality Comparisons</h1>
+      <ul>
+        <li><span class="bold">==: </span>Equal to</li>
+        <li><span class="bold">===: </span>Equal value and type equal</li>
+        <li><span class="bold">Object.is: </span>Determines if 2 values are the same value</li>
+      </ul><br>
+      <p><span class="error">Note: ?? -- Returns first arg if it's not null or undefined otherwise returns the 2nd arg</span></p><br>
+      <p><span class="error">Note: ?. -- Returns undefined if an object is undefined or null instead of an error</span></p>
+    </div>
+    <div class="container">
+      <h1>Loops</h1>
+      <img src="./Loops.png" alt="Loops Image">
+      <h1><br><span class="error">Labels in break/continue</span></h1>
+      <img src="./Label - Break_Continue.png" alt="break/continue">
+    </div>
+    <div class="container">
+      <h1>Error Handling</h1>
+      <ul>
+        <li><span class="bold">Try: </span>Let's you test a block of code</li>
+        <li><span class="bold">Catch: </span>Let's you handle the code</li>
+        <li><span class="bold">Throw: </span>Let's you create custom errors</li>
+        <li><span class="bold">Finally: </span>Let's you execute code regardless of catch outcome</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Defining & Calling Functions</h1>
+      <p><span class="bold">Defining:</span></p><br>
+      <ul>
+        <li>JavaScript function declarations are made by using the <span class="bold">function</span> keyword</li>
+        <li>Functions can also be defined by saving function expressions to a variable. “Arrow” functions are commonly used in this way</li>
+      </ul><br>
+      <p><span class="bold">Calling:</span></p><br>
+      <ul>
+        <li>When a function is defined, it is not yet executed</li>
+        <li>To call and invoke a function’s code, use the function’s name followed by parentheses: functionName()</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Arrow Functions</h1>
+      <ul>
+        <li>let myFunction = (a, b) => a * b;</li>
+        <li>hello = () => "Hello World!";</li>
+        <li><span class="bold">With Parameters: </span>hello = (val) => "Hello " + val;</li>
+        <li><span class="bold">Without Parameters: </span>hello = val => "Hello " + val;</li>
+      </ul><br>
+      <p><span class="error">Note: JS built in functions can be found <a style="color:#a83242; font-size: 18px; text-decoration: underline;" href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm">here</a></span></p>
+    </div>
+  </div>
+</body>
+</html>

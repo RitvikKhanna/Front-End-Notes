@@ -36,12 +36,23 @@ li {
   font-size: 18px;
 }
 
+li::marker {
+  color: #51557A;
+}
+
 ol li ul {
   margin: 10px 0 0 30px;
 }
 
 span.bold {
   font-weight: bold;
+  color: #51557A;
+}
+
+span.error {
+  font-weight: bold;
+  font-style: italic;
+  color: #a83242;
 }
 
 table {
@@ -81,9 +92,10 @@ tbody tr:nth-of-type(even) {
   background-color: #bbd2bc;
 }
 
-/* tbody tr:nth-of-type(2n+1) {
-  background-color: #b7e4c7;
-} */
+img {
+  max-width: 500px;
+  border-radius: 10px;
+}
 
 tbody tr:last-of-type {
   border-bottom: 2px solid #40916c;
@@ -100,10 +112,6 @@ tbody tr:last-of-type {
 .content {
   margin-top: 20px;
   padding: 20px 0 0;
-}
-
-.content-header {
-  background-color: ;
 }
 
 .content-heading {
