@@ -148,7 +148,9 @@
       <ul>
         <li>When a function is defined, it is not yet executed</li>
         <li>To call and invoke a function’s code, use the function’s name followed by parentheses: functionName()</li>
-      </ul>
+      </ul><br>
+      <h1>IIFE - Immediately invoked function expressions</h1>
+      <p>Popularly used to create closures and avoid declaring variables in global scope</p>
     </div>
     <div class="container">
       <h1>Arrow Functions</h1>
@@ -160,6 +162,98 @@
       </ul><br>
       <p><span class="error">Note: JS built in functions can be found <a style="color:#a83242; font-size: 18px; text-decoration: underline;" href="https://www.tutorialspoint.com/javascript/javascript_builtin_functions.htm">here</a></span></p>
     </div>
+    <div class="container">
+      <h1>Expressions & Operators</h1>
+      <img src="./JS Operators.jpg" alt="Operators cheat sheet" style="max-width: 1000px">
+    </div>
+    <div class="container">
+      <h1>Scope & Function Stack</h1>
+      <ul>
+        <li><span class="bold">Global Scope: </span>The default scope for all code running in script mode</li>
+        <li><span class="bold">Module Scope: </span>The scope for code running in module mode</li>
+        <li><span class="bold">Function Scope: </span>The scope created with a function</li>
+        <li><span class="bold">Block Scope: </span>The scope created with a pair of curly braces (a block)</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>Explicit Binding</h1>
+      <img src="./Explicit Binding.webp" alt="Binding Summary">
+    </div>
+    <div class="container">
+      <h1>Asynchronous JavaScript</h1>
+      <p>Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result. Some async functions are:</p><br>
+      <ul>
+        <li>fetch()</li>
+        <li>getUserMedia()</li>
+        <li>showOpenFilePicker()</li>
+      </ul><br>
+      <div class="container" style="background-color: #81b29a">
+        <h1>setTimeout()</h1>
+        <p>The setTimeout() method calls a function after a number of milliseconds.</p><br>
+        <p>const myTimeout = setTimeout(myGreeting, 5000);</p><br>
+        <p>Use clearTimeout to remove the timeout -- clearTimeout(myTimeout);</p>
+      </div>
+      <div class="container" style="background-color: #81b29a">
+        <h1>setInterval</h1>
+        <p>The setInterval() method helps us to repeatedly execute a function after a fixed delay.</p><br>
+        <p><span class="error">Note: Make sure to use clearInterval() otherwise this will run forever</span></p>
+      </div>
+      <div class="container" style="background-color: #81b29a">
+        <h1>Callbacks</h1>
+        <p>A callback is a function passed as an argument to another function.</p><br>
+        <p><span class="error">Note: When you pass a function as an argument, remember NOT to use parenthesis.</span></p>
+      </div>
+      <div class="container" style="background-color: #81b29a">
+        <h1>Promises</h1>
+        <p>A Promise contains both 
+          <span class="bold">producing </span>
+          (code that takes time) and calls to the
+          <span class="bold">consuming </span>
+          (code that must wait for result).
+        </p><br>
+        <p>Promise object has 2 properties - state & result. States are pending, fulfilled & rejected.</p>
+        <ul>
+          <li><span class="bold">Pending: </span>Result is undefined</li>
+          <li><span class="bold">Fulfilled: </span>Result is a result value</li>
+          <li><span class="bold">Rejected: </span>Result is an error obj</li>
+        </ul><br>
+        <p><span class="error">Note: Watch promises and methods video <a href="https://www.youtube.com/watch?v=DHvZLI7Db8E" style="color: #a83242; text-decoration: underline;">here</a></span></p><br>
+        <div class="container" style="background-color: #f2cc8f">
+          <h1>Async/Await</h1>
+          <img src="./Async_Await.png" alt="async await">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>API's - Fetch</h1>
+      <p><span class="bold">General syntax: </span>fetch(file).then(msg => msg.text()).then(res => log(res))</p><br>
+      <img src="./fetch.png" alt="fetch crud"><br>
+      <div class="container">
+        <h1>Fetch API Response</h1>
+        <p>Below is a result of a fetch api for todos. Script is in the html.</p><br>
+        <div id="fetch-result"></div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    const resultContainer = document.getElementById('fetch-result');
+    const list = document.createElement('ul');
+    const printTodos = (todos) => {
+      todos.forEach(todo=>{
+        let listItem = document.createElement('li');
+        listItem.innerHTML = `<span class="bold">Todo: </span>${todo.todo} <br><span class="error">Completed: </span>${todo.completed}<br><br>`
+        list.appendChild(listItem)
+      })
+    };
+    async function getTodos() {
+      const res = await fetch('https://dummyjson.com/todos?limit=5')
+      const data = await res.json()
+      console.log(data.todos);
+      printTodos(data.todos);
+    }
+    getTodos()
+    resultContainer.appendChild(list);
+  </script>
 </body>
 </html>

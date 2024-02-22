@@ -44,6 +44,10 @@ ol li ul {
   margin: 10px 0 0 30px;
 }
 
+p {
+  line-height: 30px;
+}
+
 span.bold {
   font-weight: bold;
   color: #51557A;
@@ -95,7 +99,12 @@ tbody tr:nth-of-type(even) {
 img {
   max-width: 500px;
   border-radius: 10px;
+  cursor: pointer;
 }
+
+/* img:hover {
+  transform: scale(1.5);
+} */
 
 tbody tr:last-of-type {
   border-bottom: 2px solid #40916c;
