@@ -234,8 +234,37 @@
         <div id="fetch-result"></div>
       </div>
     </div>
+    <div class="container">
+      <h1>Classes & Inheritance</h1>
+      <p>typeOf(className) is a function. What's happening is that class User {} creates a function named User.</p><br>
+      <p><span class="bold">The function code is taken from the constructor</span> (or assumed) empty if we don't write it</p><br>
+      <p>Stored class methods such as <span class="bold">sayHi() is stored in User.prototype</span></p><br><br>
+      <p><span class="error">How is a class any different than a function?</span></p><br>
+      <ul>
+        <li><span class="bold">[[IsClassConstructor]]: </span>True for classes - You can't just call User(); It will throw an error</li>
+        <li><span class="bold">enumerable: </span>False for all methods in "prototype" - <span class="bold">It's GOOD b/c we don't want class methods in for...in loop</span></li>
+        <li>Classes always use <span class="bold">strict</span></li>
+      </ul><br>
+      <h1>Syntax</h1>
+      <div style="display: flex; gap: 50px">
+        <img src="./Classes.png" alt="Classes">
+        <img src="./Get-Set Classes.png" alt="getters/setters">
+      </div>
+    </div>
+    <div class="container">
+      <h1>Modules</h1>
+      <p>Application gets bigger -- we want to split it in files called <span class="bold">modules</span></p><br>
+      <p>A module may contain a class or a library of functions for a specific purpose</p><br>
+      <p>Modules have <span class="bold">import </span>(from other modules) and <span class="bold">export</span> (other modules can use it)</p><br>
+      <p>export function sayHi() { . . . } - we can use it in the other module as <span class="bold">import {sayHi} from './sayHi.js' </span></p><br>
+      <p><span class="error">Note: "this" is undefined in modules</span></p><br>
+      <p><span class="error">Note: "import.meta": </span><span class="error" style="font-weight: normal;">contains current module info. In a browser it contains URL of script, or a current webpage URL inside HTML</span></p>
+      <div class="container">
+        <h1>TODO</h1>
+        <a href="./https://javascript.info/modules">Read more and todo</a>
+      </div>
+    </div>
   </div>
-
   <script>
     const resultContainer = document.getElementById('fetch-result');
     const list = document.createElement('ul');
